@@ -518,8 +518,16 @@ tile_set = SubResource("TileSet_r0du0")
 metadata/_edit_lock_ = true
 
 [node name="HUD" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Camera2D" type="Camera2D" parent="HUD"]
+position = Vector2(726, 1272)
+limit_smoothed = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
 
 [node name="Navbar2" type="Node2D" parent="HUD"]
+metadata/_edit_lock_ = true
 
 [node name="Navbar" type="PanelContainer" parent="HUD/Navbar2"]
 z_index = 50
@@ -609,6 +617,7 @@ offset_top = 18.0
 offset_right = 234.76471
 offset_bottom = 200.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_wkp8b")
+metadata/_edit_lock_ = true
 
 [node name="Username" type="Label" parent="HUD/Header"]
 z_index = 60
@@ -620,6 +629,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_3dxm6")
 theme_override_font_sizes/font_size = 32
 text = "PLAYER-MTG123"
+metadata/_edit_lock_ = true
 
 [node name="Level" type="Label" parent="HUD/Header"]
 z_index = 60
@@ -635,8 +645,10 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_20pc6")
 text = "BRONZE"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_lock_ = true
 
 [node name="CoinHUD" type="Node2D" parent="HUD/Header"]
+metadata/_edit_lock_ = true
 
 [node name="CoinRibbon" type="PanelContainer" parent="HUD/Header/CoinHUD"]
 z_index = 60
@@ -646,7 +658,6 @@ offset_top = 50.0
 offset_right = 1024.0
 offset_bottom = 130.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_c6i3y")
-metadata/_edit_use_anchors_ = true
 
 [node name="Coin" type="Panel" parent="HUD/Header/CoinHUD"]
 z_index = 60
@@ -656,7 +667,6 @@ offset_top = 44.0
 offset_right = 854.0
 offset_bottom = 137.05084
 theme_override_styles/panel = SubResource("StyleBoxTexture_c2ibq")
-metadata/_edit_use_anchors_ = true
 
 [node name="CoinVal" type="Label" parent="HUD/Header/CoinHUD"]
 z_index = 60
@@ -668,10 +678,10 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_3dxm6")
 theme_override_font_sizes/font_size = 22
 text = "100,000"
-metadata/_edit_use_anchors_ = true
 
 [node name="CoinHUD2" type="Node2D" parent="HUD/Header"]
 position = Vector2(312, 0)
+metadata/_edit_lock_ = true
 
 [node name="CoinRibbon" type="PanelContainer" parent="HUD/Header/CoinHUD2"]
 z_index = 60
@@ -681,7 +691,6 @@ offset_top = 50.0
 offset_right = 1024.0
 offset_bottom = 130.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_c6i3y")
-metadata/_edit_use_anchors_ = true
 
 [node name="Coin2" type="Panel" parent="HUD/Header/CoinHUD2"]
 z_index = 60
@@ -691,7 +700,6 @@ offset_top = 44.0
 offset_right = 858.0
 offset_bottom = 137.05084
 theme_override_styles/panel = SubResource("StyleBoxTexture_5vvyt")
-metadata/_edit_use_anchors_ = true
 
 [node name="CoinVal" type="Label" parent="HUD/Header/CoinHUD2"]
 z_index = 60
@@ -703,4 +711,3 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_3dxm6")
 theme_override_font_sizes/font_size = 22
 text = "155"
-metadata/_edit_use_anchors_ = true
