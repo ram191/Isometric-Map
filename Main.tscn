@@ -527,7 +527,6 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
 [node name="Navbar2" type="Node2D" parent="HUD"]
-metadata/_edit_lock_ = true
 
 [node name="Navbar" type="PanelContainer" parent="HUD/Navbar2"]
 z_index = 50
@@ -598,11 +597,14 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_03owx")
 theme_override_styles/hover = ExtResource("6_trn2v")
 text = "CHAT"
 
-[node name="Header" type="Node2D" parent="HUD"]
+[node name="Header" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="HeaderBg" type="PanelContainer" parent="HUD/Header"]
 z_index = 50
 texture_filter = 3
+layout_mode = 0
 offset_left = -40.0
 offset_top = -18.0
 offset_right = 1446.0
@@ -612,6 +614,7 @@ metadata/_edit_lock_ = true
 
 [node name="Profile" type="Panel" parent="HUD/Header"]
 z_index = 60
+layout_mode = 0
 offset_left = 26.0
 offset_top = 18.0
 offset_right = 234.76471
@@ -621,6 +624,7 @@ metadata/_edit_lock_ = true
 
 [node name="Username" type="Label" parent="HUD/Header"]
 z_index = 60
+layout_mode = 0
 offset_left = 256.0
 offset_top = 42.0
 offset_right = 587.0
@@ -634,6 +638,7 @@ metadata/_edit_lock_ = true
 [node name="Level" type="Label" parent="HUD/Header"]
 z_index = 60
 texture_filter = 1
+layout_mode = 0
 offset_left = 256.0
 offset_top = 96.0
 offset_right = 587.0
