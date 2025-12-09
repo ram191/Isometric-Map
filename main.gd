@@ -7,11 +7,11 @@ extends Control
 
 func expand_menu() -> void:
 	var tween = create_tween()
-	tween.tween_property($Camera2D/Menu, "position:y", 0, 0.15)
+	tween.tween_property($Menu, "position:y", 0, 0.15)
 	
 func collapse_menu() -> void:
 	var tween = create_tween()
-	tween.tween_property($Camera2D/Menu, "position:y", -460, 0.15)
+	tween.tween_property($Menu, "position:y", -460, 0.15)
 
 
 func _on_check_button_toggled(toggled_on: bool) -> void:
