@@ -1,11 +1,10 @@
-[gd_scene load_steps=65 format=4 uid="uid://b5jjkea5316e8"]
+[gd_scene load_steps=64 format=4 uid="uid://b5jjkea5316e8"]
 
 [ext_resource type="Script" uid="uid://dnlc6hq2ve4gl" path="res://main.gd" id="1_5vvyt"]
 [ext_resource type="Texture2D" uid="uid://l7ae7po1r3sv" path="res://roads.png" id="1_glv2v"]
 [ext_resource type="Texture2D" uid="uid://c48w8ynhug2vf" path="res://items.png" id="2_uu6xs"]
 [ext_resource type="Texture2D" uid="uid://wji5oxcutd70" path="res://buildings.png" id="3_r0du0"]
 [ext_resource type="FontFile" uid="uid://o1d1uvuug4c" path="res://Kaph-Regular.ttf" id="5_3dxm6"]
-[ext_resource type="Script" uid="uid://duxua4pyjcgh7" path="res://camera.gd" id="5_c6i3y"]
 [ext_resource type="Texture2D" uid="uid://dy5e2bbxw08q4" path="res://images/map.png" id="6_3b0ty"]
 [ext_resource type="Texture2D" uid="uid://cl13q1n12yoa8" path="res://images/top_nav.png" id="6_sc1dx"]
 [ext_resource type="Texture2D" uid="uid://dk00rboahyvds" path="res://images/profile_picture.png" id="7_5tuhn"]
@@ -1437,7 +1436,6 @@ texture = ExtResource("19_5tuhn")
 texture = ExtResource("23_hhcpw")
 
 [node name="Root" type="Node2D"]
-scale = Vector2(0.5, 0.5)
 script = ExtResource("1_5vvyt")
 
 [node name="Map" type="TileMapLayer" parent="."]
@@ -1449,37 +1447,44 @@ position = Vector2(-174, -336)
 tile_map_data = PackedByteArray("AAABAAAAAAAAAAAAAAACAP//AAAAAAAAAAADAP7/AAAAAAAAAAAEAP3/AAAAAAAAAAAEAPz/AAAAAAAAAAAFAPv/AAAAAAAAAAAGAPr/AAAAAAAAAAAGAPv/AAAAAAAAAAAFAPz/AAAAAAAAAAAFAP3/AAAAAAAAAAAEAP7/AAAAAAAAAAAEAP//AAAAAAAAAAAEAAAAAAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAACAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAFAAMAAAACAAIAAAAFAAMAAAACAAMAAAAAAAAAAAADAAIAAAAFAAMAAAADAAMAAQAJAAEAAAADAAQAAQAJAAEAAAAEAAEAAAAAAAAAAAAEAAIAAQAFAAUAAAAEAAMAAQAJAAEAAAAEAAQAAAAAAAAAAAAEAAUAAAAAAAAAAAAFAAEAAAAAAAAAAAAFAAIAAQAFAAUAAAAFAAMAAQAJAAEAAAAFAAQAAQAJAAEAAAAFAAUAAQAJAAEAAAAFAAYAAQAJAAEAAAAGAAEAAQAFAAUAAAAGAAIAAQAFAAUAAAAGAAMAAQAJAAEAAAAGAAQAAQAJAAEAAAAGAAUAAQAJAAEAAAAGAAYAAQAJAAEAAAAGAAcAAAAAAAAAAAAHAAIAAAAFAAMAAAAHAAMAAAAAAAAAAAAHAAQAAAAAAAAAAAAHAAUAAQAJAAEAAAAHAAYAAAAAAAAAAAAHAAcAAAAAAAAAAAAIAAIAAAAFAAMAAAAIAAMAAAAAAAAAAAAIAAQAAAAAAAAAAAAIAAUAAAAAAAAAAAAIAAYAAAAAAAAAAAAIAAcAAAAAAAAAAAAJAAMAAAAFAAMAAAAJAAQAAAAFAAMAAAAJAAUAAAAFAAMAAAAJAAYAAAAFAAMAAAAJAAcAAAAFAAMAAAAKAAEAAAAAAAAAAAAKAAMAAAAAAAAAAAAKAAQAAAAAAAAAAAAKAAUAAAAAAAAAAAAKAAYAAAAAAAAAAAAKAAcAAAAAAAAAAAALAAEAAAAAAAAAAAALAAIAAAAAAAAAAAALAAQAAAAAAAAAAAALAAUAAAAAAAAAAAALAAYAAAAAAAAAAAALAAcAAAAAAAAAAAAMAAEAAAAAAAAAAAAMAAIAAAAAAAAAAAAMAAMAAAAAAAAAAAAMAAQAAAAAAAAAAAAMAAUAAAAAAAAAAAAMAAYAAAAAAAAAAAAMAAcAAAAAAAAAAAANAAEAAAAAAAAAAAANAAIAAAAAAAAAAAANAAMAAAAAAAAAAAANAAQAAAAAAAAAAAANAAUAAQAIAAgAAAANAAYAAAAAAAAAAAANAAcAAAAAAAAAAAAOAAEAAAAAAAAAAAAOAAIAAAAAAAAAAAAOAAMAAAAAAAAAAAAOAAQAAAAAAAAAAAAOAAUAAAAAAAAAAAAOAAYAAAAAAAAAAAAOAAcAAAAAAAAAAAAPAAEAAAAAAAAAAAAPAAIAAAAAAAAAAAAPAAMAAAAAAAAAAAAPAAQAAQAEAAQAAAAPAAUAAAAHAAEAAAAPAAYAAAAHAAEAAAAPAAcAAAAHAAEAAAAQAAQAAAAAAAAAAAAQAAUAAAAAAAAAAAAQAAYAAAAAAAAAAAAQAAcAAAAEAAMAAAADAP//AAAAAAAAAAAFAP//AAAAAAAAAAAHAP//AAAAAAAAAAAIAP//AQAEAAYAAAAJAP//AAAAAAAAAAAKAP//AAAAAAAAAAALAP//AAAAAAAAAAAMAP//AAAAAAAAAAAGAPz/AAAAAAAAAAAGAP3/AAAAAAAAAAAGAP7/AAAAAAAAAAAHAPr/AAAAAAAAAAAHAPv/AAAAAAAAAAAHAPz/AAAAAAAAAAAHAP3/AAAAAAAAAAAHAP7/AAAAAAAAAAAIAPr/AAAAAAAAAAAIAPv/AAAAAAAAAAAIAPz/AAAAAAAAAAAIAP3/AAAAAAAAAAAIAP7/AAAAAAAAAAACAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAMAAAAAgAAAAAAAAANAP//AAAAAAAAAAANAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAAJAPz/AAAAAAAAAAAJAP3/AAAAAAAAAAAJAP7/AAAAAAAAAAAKAP3/AAAAAAAAAAAKAP7/AAAAAAAAAAAFAP7/AAAAAAAAAAAHAAgAAAAAAAAAAAAIAAgAAAAAAAAAAAAIAAkAAAAAAAAAAAAJAAgAAAAFAAMAAAAJAAkAAQAEAAYAAAAJAAoAAAAFAAMAAAAKAAgAAAAAAAAAAAAKAAkAAAAAAAAAAAAKAAoAAAAAAAAAAAAKAAsAAAAAAAAAAAALAAgAAAAAAAAAAAALAAkAAAAAAAAAAAALAAoAAAAAAAAAAAALAAsAAAAAAAAAAAALAAwAAAAAAAAAAAAMAAgAAAAAAAAAAAAMAAkAAAAAAAAAAAAMAAoAAAAAAAAAAAAMAAsAAAAAAAAAAAAMAAwAAAAAAAAAAAAMAA0AAAAAAAAAAAANAAgAAAAAAAAAAAANAAkAAQACAAMAAAANAAoAAAAAAAAAAAANAAsAAAAAAAAAAAANAAwAAAAAAAAAAAANAA0AAAAAAAAAAAANAA4AAAAAAAAAAAAOAAgAAAAGAAMAAAAOAAkAAAAAAAAAAAAOAAoAAAAAAAAAAAAOAAsAAAAAAAAAAAAOAAwAAAAAAAAAAAAOAA0AAAAGAAEAAAAOAA4AAAAAAAAAAAAPAAkAAAAJAAIAAAAPAAoAAAAAAAAAAAAPAAsAAAAAAAAAAAAPAAwAAAAAAAAAAAAPAA0AAAACAAAAAAAPAA4AAAAAAAAAAAAQAAgAAAAFAAMAAAAQAAkAAAAIAAEAAAAQAAsAAAAAAAAAAAAQAAwAAAAAAAAAAAAQAA0AAAACAAAAAAAQAA4AAQAIAAcAAAARAAcAAAAAAAAAAAARAAgAAAAAAAAAAAARAAkAAAAIAAEAAAARAAsAAAAEAAMAAAARAAwAAAAAAAAAAAARAA0AAAACAAAAAAARAA4AAAAAAAAAAAASAAcAAAAAAAAAAAASAAgAAAAFAAMAAAASAAkAAAAIAAEAAAASAAsAAAAAAAAAAAASAAwAAAAAAAAAAAASAA0AAAACAAAAAAASAA4AAAAAAAAAAAATAAcAAAABAAAAAAATAAgAAAABAAAAAAATAAkAAAABAAAAAAATAAoAAAABAAAAAAATAAsAAAABAAAAAAATAAwAAAABAAAAAAATAA0AAAABAAEAAAATAA4AAAABAAAAAAAUAAcAAAAAAAAAAAAUAAgAAAAAAAAAAAAUAAkAAAAEAAMAAAAUAAoAAAAAAAAAAAAUAAsAAAAGAAMAAAAUAAwAAAAAAAAAAAAUAA0AAAACAAAAAAAUAA4AAAAEAAMAAAAVAAcAAAAAAAAAAAAVAAgAAAAAAAAAAAAVAAkAAAAAAAAAAAAVAAoAAAADAAQAAAAVAAsAAAADAAQAAAAVAAwAAAAAAAAAAAAVAA0AAAACAAAAAAAVAA4AAAAAAAAAAAAWAAkAAAAAAAAAAAAWAAoAAAAAAAAAAAAWAAsAAAAAAAAAAAAWAAwAAAAAAAAAAAAWAA0AAAACAAAAAAAWAA4AAAAAAAAAAAAXAAkAAQACAAMAAAAXAAoAAAABAAAAAAAXAAsAAAABAAAAAAAXAAwAAAABAAAAAAAXAA0AAAAIAAAAAAAXAA4AAQAIAAcAAAAYAAkAAAAGAAMAAAAYAAoAAAAAAAAAAAAYAAsAAAAAAAAAAAAYAAwAAAAAAAAAAAAYAA0AAAACAAAAAAAYAA4AAAAGAAMAAAAZAAkAAAAAAAAAAAAZAAoAAAAAAAAAAAAZAAsAAAAAAAAAAAAZAAwAAAAAAAAAAAAZAA0AAAACAAAAAAAZAA4AAAAFAAMAAAAaAA0AAAAHAAEAAAAaAA4AAAAHAAEAAAAbAA0AAAAFAAMAAAAbAA4AAAAFAAMAAAATAAQAAAAAAAAAAAATAAUAAAAAAAAAAAATAAYAAAAAAAAAAAATAA8AAAABAAAAAAATABAAAAABAAAAAAATABEAAAABAAAAAAATABIAAAABAAAAAAATABMAAAABAAAAAAATABQAAAAGAAAAAAAUAAYAAAAAAAAAAAAUAA8AAAAAAAAAAAAUABAAAAAAAAAAAAAUABEAAAAAAAAAAAAUABIAAAAAAAAAAAAUABMAAAAAAAAAAAAUABQAAAACAAAAAAAVAAYAAAAAAAAAAAAVAA8AAAAAAAAAAAAVABAAAAAAAAAAAAAVABEAAAAAAAAAAAAVABIAAAAAAAAAAAAVABMAAAAAAAAAAAAVABQAAAACAAAAAAAVABUAAAAEAAMAAAAVABYAAAAAAAAAAAAWAA8AAAAAAAAAAAAWABAAAQACAAMAABAWABEAAAAAAAAAAAAWABIAAAAEAAMAAAAWABMAAAAAAAAAAAAWABQAAAAFAAAAAAAWABUAAAABAAAAAAAWABYAAAABAAAAAAAXAA8AAQAIAAcAAAAXABAAAAAAAAAAAAAXABEAAAAAAAAAAAAXABIAAAAAAAAAAAAXABMAAQAIAAcAAAAXABQAAAAAAAAAAAAXABUAAAAAAAAAAAAYAA8AAAAAAAAAAAAYABAAAAAAAAAAAAAYABEAAAAAAAAAAAAYABIAAAAAAAAAAAAYABMAAAAAAAAAAAAYABQAAAAAAAAAAAAYABUAAAAAAAAAAAAZAA8AAAAFAAMAAAAZABAAAAAFAAMAAAAZABEAAAAAAAAAAAAZABIAAAAAAAAAAAAZABMAAAAFAAMAAAAaAA8AAAAHAAEAAAAaABAAAAAHAAEAAAAaABEAAAAHAAEAAAAaABIAAAAHAAEAAAAbAA8AAAAFAAMAAAAbABAAAAAFAAMAAAAbABEAAAAFAAMAAAAOAA8AAAAAAAAAAAAPAA8AAQACAAMAABAPABAAAAAAAAAAAAAQAA8AAAAAAAAAAAAQABAAAAAAAAAAAAAQABEAAQAEAAMAAAARAA8AAAAAAAAAAAARABAAAAAAAAAAAAARABEAAAAAAAAAAAARABIAAAAAAAAAAAASAA8AAAAAAAAAAAASABAAAAAAAAAAAAASABEAAAAAAAAAAAASABIAAAAAAAAAAAASABMAAAAAAAAAAAARAAQAAAAAAAAAAAARAAUAAAAAAAAAAAARAAYAAAAAAAAAAAASAAQAAQAAAAMAAAASAAUAAAAAAAAAAAASAAYAAAAAAAAAAAAJAPv/AAAAAAAAAAALAP3/AQAEAAYAAAALAP7/AAAAAAAAAAAMAP3/AAAAAAAAAAAMAP7/AAAAAAAAAAAQAAIAAAAAAAAAAAAQAAMAAAAAAAAAAAAWABcAAAABAAAAAAAXABYAAQAEAAAAAAAYABcAAAAAAAAAAAAZABcAAAAAAAAAAAAaABcAAAAAAAAAAAAbABcAAQAAAAMAAAAcABcAAAAAAAAAAAAdABcAAAAAAAAAAAAeABcAAAAAAAAAAAAcABYAAAAAAAAAAAAbABYAAAAAAAAAAAAaABUAAAAAAAAAAAAaABQAAAAAAAAAAAAbABQAAAAAAAAAAAAbABMAAAAFAAMAAAAbABIAAAAFAAMAAAAcABEAAAAAAAAAAAAcABAAAAAAAAAAAAAYABkAAAAAAAAAAAAZABoAAAAAAAAAAAAaABsAAAAAAAAAAAAaABoAAAAAAAAAAAAbABoAAAAAAAAAAAAbABkAAAAAAAAAAAAcABkAAAAAAAAAAAAcABgAAAAAAAAAAAAdABgAAAAAAAAAAAAeABYAAAAAAAAAAAAfABYAAAAAAAAAAAAfABUAAAAAAAAAAAAgABUAAAAAAAAAAAAgABQAAAAAAAAAAAAhABQAAAAAAAAAAAAhABMAAAAAAAAAAAAiABMAAAAAAAAAAAAiABIAAAAAAAAA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")
 tile_set = SubResource("TileSet_r0du0")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-anchor_mode = 0
-limit_enabled = false
-limit_left = 0
-limit_top = 0
-limit_right = 0
-limit_bottom = 0
-script = ExtResource("5_c6i3y")
-
-[node name="Panel" type="PanelContainer" parent="Camera2D"]
-clip_contents = true
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1446.0
-offset_bottom = 2838.0
+offset_right = 720.0
+offset_bottom = 1280.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="Panel" type="PanelContainer" parent="Control"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 257.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_o7g6l")
 
-[node name="Header" type="Control" parent="Camera2D"]
-layout_mode = 3
+[node name="Header" type="Control" parent="Control"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -640.0
+offset_right = -360.0
+offset_bottom = -640.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.5, 0.5)
 
-[node name="HeaderBg" type="PanelContainer" parent="Camera2D/Header"]
+[node name="HeaderBg" type="PanelContainer" parent="Control/Header"]
 z_index = 50
 texture_filter = 3
 layout_mode = 0
@@ -1487,7 +1492,7 @@ offset_right = 1446.0
 offset_bottom = 234.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_fos0i")
 
-[node name="Profile" type="Panel" parent="Camera2D/Header"]
+[node name="Profile" type="Panel" parent="Control/Header"]
 z_index = 60
 layout_mode = 0
 offset_left = 32.0
@@ -1497,7 +1502,7 @@ offset_bottom = 83.0
 scale = Vector2(3, 3)
 theme_override_styles/panel = SubResource("StyleBoxTexture_wkp8b")
 
-[node name="Panel" type="Panel" parent="Camera2D/Header"]
+[node name="Panel" type="Panel" parent="Control/Header"]
 z_index = 55
 layout_mode = 0
 offset_left = 80.0
@@ -1506,7 +1511,7 @@ offset_right = 712.0
 offset_bottom = 178.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_gb15f")
 
-[node name="Username" type="Label" parent="Camera2D/Header/Panel"]
+[node name="Username" type="Label" parent="Control/Header/Panel"]
 z_index = 60
 layout_mode = 0
 offset_left = 132.0
@@ -1518,7 +1523,7 @@ theme_override_fonts/font = SubResource("FontVariation_sph85")
 theme_override_font_sizes/font_size = 32
 text = "USER-1123"
 
-[node name="Level" type="Label" parent="Camera2D/Header/Panel"]
+[node name="Level" type="Label" parent="Control/Header/Panel"]
 z_index = 60
 texture_filter = 1
 layout_mode = 0
@@ -1533,9 +1538,9 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_20pc6")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CoinHUD" type="Node2D" parent="Camera2D/Header"]
+[node name="CoinHUD" type="Node2D" parent="Control/Header"]
 
-[node name="CoinRibbon" type="PanelContainer" parent="Camera2D/Header/CoinHUD"]
+[node name="CoinRibbon" type="PanelContainer" parent="Control/Header/CoinHUD"]
 z_index = 55
 texture_filter = 1
 offset_left = 1116.0
@@ -1545,7 +1550,7 @@ offset_bottom = 162.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_c6i3y")
 metadata/_edit_use_anchors_ = true
 
-[node name="Coin" type="Panel" parent="Camera2D/Header/CoinHUD"]
+[node name="Coin" type="Panel" parent="Control/Header/CoinHUD"]
 z_index = 60
 texture_filter = 1
 offset_left = 1128.0
@@ -1555,7 +1560,7 @@ offset_bottom = 150.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_c2ibq")
 metadata/_edit_use_anchors_ = true
 
-[node name="CoinBg" type="Panel" parent="Camera2D/Header/CoinHUD"]
+[node name="CoinBg" type="Panel" parent="Control/Header/CoinHUD"]
 z_index = 55
 texture_filter = 1
 offset_left = 1114.0
@@ -1565,7 +1570,7 @@ offset_bottom = 162.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_sph85")
 metadata/_edit_use_anchors_ = true
 
-[node name="CoinVal" type="Label" parent="Camera2D/Header/CoinHUD"]
+[node name="CoinVal" type="Label" parent="Control/Header/CoinHUD"]
 z_index = 60
 offset_left = 1228.0
 offset_top = 92.0
@@ -1577,12 +1582,12 @@ theme_override_font_sizes/font_size = 32
 text = "100,000"
 metadata/_edit_use_anchors_ = true
 
-[node name="CoinHUD2" type="Node2D" parent="Camera2D/Header"]
+[node name="CoinHUD2" type="Node2D" parent="Control/Header"]
 visible = false
 position = Vector2(312, 0)
 metadata/_edit_lock_ = true
 
-[node name="CoinRibbon" type="PanelContainer" parent="Camera2D/Header/CoinHUD2"]
+[node name="CoinRibbon" type="PanelContainer" parent="Control/Header/CoinHUD2"]
 z_index = 60
 texture_filter = 1
 offset_left = 810.0
@@ -1591,7 +1596,7 @@ offset_right = 1024.0
 offset_bottom = 130.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_c6i3y")
 
-[node name="Coin2" type="Panel" parent="Camera2D/Header/CoinHUD2"]
+[node name="Coin2" type="Panel" parent="Control/Header/CoinHUD2"]
 z_index = 60
 texture_filter = 1
 offset_left = 768.0
@@ -1600,7 +1605,7 @@ offset_right = 858.0
 offset_bottom = 137.05084
 theme_override_styles/panel = SubResource("StyleBoxTexture_5vvyt")
 
-[node name="CoinVal" type="Label" parent="Camera2D/Header/CoinHUD2"]
+[node name="CoinVal" type="Label" parent="Control/Header/CoinHUD2"]
 z_index = 60
 offset_left = 862.0
 offset_top = 78.0
@@ -1611,17 +1616,23 @@ theme_override_fonts/font = ExtResource("5_3dxm6")
 theme_override_font_sizes/font_size = 22
 text = "155"
 
-[node name="Navbar" type="Control" parent="Camera2D"]
-layout_mode = 3
+[node name="Navbar" type="Control" parent="Control"]
+z_index = 60
+layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
+offset_left = -360.0
+offset_top = -1280.0
+offset_right = 240.0
+offset_bottom = -680.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(0.5, 0.5)
 
-[node name="Navbar" type="PanelContainer" parent="Camera2D/Navbar"]
+[node name="Navbar" type="PanelContainer" parent="Control/Navbar"]
 z_index = 50
 texture_filter = 3
 layout_mode = 0
@@ -1631,7 +1642,7 @@ offset_right = 1440.0
 offset_bottom = 2560.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_bg4s2")
 
-[node name="Button" type="Button" parent="Camera2D/Navbar"]
+[node name="Button" type="Button" parent="Control/Navbar"]
 z_index = 60
 texture_filter = 1
 layout_mode = 0
@@ -1647,7 +1658,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_hhcpw")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_kjvhd")
 theme_override_styles/hover = SubResource("StyleBoxTexture_sc1dx")
 
-[node name="Button2" type="Button" parent="Camera2D/Navbar"]
+[node name="Button2" type="Button" parent="Control/Navbar"]
 z_index = 60
 texture_filter = 1
 layout_mode = 0
@@ -1663,7 +1674,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_5mvff")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_5tuhn")
 theme_override_styles/hover = SubResource("StyleBoxTexture_2gh4u")
 
-[node name="Button3" type="Button" parent="Camera2D/Navbar"]
+[node name="Button3" type="Button" parent="Control/Navbar"]
 z_index = 60
 texture_filter = 1
 layout_mode = 0
@@ -1679,7 +1690,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_40n85")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_3b0ty")
 theme_override_styles/hover = SubResource("StyleBoxTexture_xrxkg")
 
-[node name="Button4" type="Button" parent="Camera2D/Navbar"]
+[node name="Button4" type="Button" parent="Control/Navbar"]
 z_index = 60
 texture_filter = 1
 layout_mode = 0
@@ -1695,7 +1706,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_devvj")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_sqvbp")
 theme_override_styles/hover = SubResource("StyleBoxTexture_hri7i")
 
-[node name="Central" type="Button" parent="Camera2D/Navbar"]
+[node name="Central" type="Button" parent="Control/Navbar"]
 z_index = 60
 texture_filter = 1
 layout_mode = 0
@@ -1711,14 +1722,15 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_mxvw5")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_w3rk5")
 theme_override_styles/hover = SubResource("StyleBoxTexture_oye8v")
 
-[node name="Menu" type="Panel" parent="Camera2D"]
-offset_top = -920.0
+[node name="Menu" type="Panel" parent="Control"]
+layout_mode = 0
+offset_top = -460.0
 offset_right = 91.0
-offset_bottom = -580.0
-scale = Vector2(4, 4)
+offset_bottom = -120.0
+scale = Vector2(2, 2)
 theme_override_styles/panel = SubResource("StyleBoxTexture_vi5kq")
 
-[node name="CheckButton" type="CheckButton" parent="Camera2D/Menu"]
+[node name="CheckButton" type="CheckButton" parent="Control/Menu"]
 layout_mode = 0
 offset_left = 31.5
 offset_top = 307.0
@@ -1735,4 +1747,4 @@ theme_override_icons/checked_disabled_mirrored = ExtResource("24_hhcpw")
 theme_override_icons/unchecked_disabled_mirrored = ExtResource("24_hhcpw")
 expand_icon = true
 
-[connection signal="toggled" from="Camera2D/Menu/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="toggled" from="Control/Menu/CheckButton" to="." method="_on_check_button_toggled"]
