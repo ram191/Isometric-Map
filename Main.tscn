@@ -1448,6 +1448,7 @@ tile_map_data = PackedByteArray("AAABAAAAAAAAAAAAAAACAP//AAAAAAAAAAADAP7/AAAAAAA
 tile_set = SubResource("TileSet_r0du0")
 
 [node name="Control" type="Control" parent="."]
+clip_contents = true
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -1459,7 +1460,6 @@ grow_vertical = 2
 size_flags_vertical = 3
 
 [node name="Panel" type="PanelContainer" parent="Control"]
-clip_contents = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
