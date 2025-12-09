@@ -1450,11 +1450,16 @@ tile_map_data = PackedByteArray("AAABAAAAAAAAAAAAAAACAP//AAAAAAAAAAADAP7/AAAAAAA
 tile_set = SubResource("TileSet_r0du0")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(6, 6)
 anchor_mode = 0
+limit_enabled = false
+limit_left = 0
+limit_top = 0
+limit_right = 0
+limit_bottom = 0
 script = ExtResource("5_c6i3y")
 
 [node name="Panel" type="PanelContainer" parent="Camera2D"]
+clip_contents = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -1608,7 +1613,13 @@ text = "155"
 
 [node name="Navbar" type="Control" parent="Camera2D"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
 
 [node name="Navbar" type="PanelContainer" parent="Camera2D/Navbar"]
 z_index = 50
