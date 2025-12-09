@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 #
 #func _ready() -> void:
 	#await Auth.get_user_data()
